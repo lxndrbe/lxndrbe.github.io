@@ -176,6 +176,14 @@
     margin-bottom: 8px;
   }
 
+  .plugin-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
   .plugin-card .tagline {
     color: var(--text-label);
     font-size: 14px;
@@ -193,6 +201,32 @@
     border: 1px solid var(--border);
     border-radius: 3px;
     padding: 4px 10px;
+  }
+
+  .sponsor-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    background: rgba(255, 115, 25, 0.08);
+    border-radius: 4px;
+    color: var(--text-label);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    transition: all 0.15s ease;
+  }
+
+  .sponsor-btn:hover {
+    background: rgba(255, 115, 25, 0.15);
+    border-color: var(--amber);
+    color: var(--amber-light);
+  }
+
+  .sponsor-btn svg {
+    width: 16px;
+    height: 16px;
   }
 
   footer {
@@ -257,6 +291,12 @@
   <nav>
     <a href="https://cleveraudio.org/" target="_blank" rel="noopener">CLAP</a>
     <a href="https://www.youtube.com/@lxndrbe" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://github.com/sponsors/lxndrbe" target="_blank" rel="noopener" class="sponsor-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+      SPONSOR
+    </a>
     <a href="https://buymeacoffee.com/lxndrbe" target="_blank" rel="noopener">Support</a>
   </nav>
 </header>
@@ -279,12 +319,14 @@
     <div class="upcoming-label">More to come</div>
     <div class="plugin-grid">
       <div class="plugin-card">
+        <img src="img/Equilibrum.jpg" alt="Equilibrium">
         <div class="name">Equilibrium</div>
         <div class="tagline">Balance your master bus by frequency. Real-time spectral analysis meets surgical band-by-band EQ and stereo control—no mastering-grade compression, just precision correction.
         </div>
         <div class="status">In development</div>
       </div>
       <div class="plugin-card">
+        <img src="img/Meridian.jpg" alt="Meridian">
         <div class="name">Meridian</div>
         <div class="tagline">Sculpt and shape any track or group channel. Variable-band EQ + soft-knee compressor + analog saturation in one focused workflow. With spectral visualization to guide every move.</div>
         <div class="status">In development</div>
