@@ -1,0 +1,164 @@
+<!---
+  plugin.html — Volle Plugin-Detailseite
+  Frontmatter: layout: plugin, plugin: <slug>
+  Holt Daten aus _data/plugins.yml
+--->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Equilibrium — LX Audiolabs</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <a href="/" style="text-decoration:none;display:flex;align-items:baseline;gap:0;">
+      <span class="lx">LX</span><span class="audiolabs">AUDIOLABS</span>
+    </a>
+  </div>
+  <nav>
+    <a href="/plugins/">Plugins</a>
+    <a href="/faq/">FAQ</a>
+    <a href="/about/">About</a>
+    <a href="https://www.youtube.com/@lxndrbe" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://github.com/sponsors/lxndrbe" target="_blank" rel="noopener" class="sponsor-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+      SPONSOR
+    </a>
+  </nav>
+</header>
+
+
+<main>
+  <div class="plugin-hero">
+    
+    <img src="/assets/img/Equilibrum-SC.png" alt="Equilibrium" class="plugin-hero-img">
+    
+    <div class="plugin-hero-text">
+      <div class="eyebrow">STABLE</div>
+      <h1>Equilibrium <span class="ver">v1.1.0</span></h1>
+      <p class="lead">Equilibrium is your spectral balancer for the master bus. It splits the frequency spectrum into five independent bands — Sub, Bass, Mid, Hi-Mid, Presence — each with its own EQ, stereo width, and pan control. A real-time FFT overlay shows you exactly what's happening across your mix in zero-latency processing, eliminating guesswork and delivering surgical precision. <br><br> Unlike traditional parametric EQs that require you to hunt for the right frequency, Equilibrium uses <strong>band-based design</strong>: you see the problematic frequency range, measure its deviation from target, and adjust gain, stereo width, or pan directly above that band's visualization. The integrated analysis and control promotes fast, accurate mixing decisions without context-switching between windows. <br><br> Purpose-built for <strong>pre-mastering balance</strong>, Equilibrium corrects mix imbalances, tightens stereo imagery, and prepares your mix for the mastering chain. Export your plugin state via SNAP and feed it into any AI for feedback — this is the <strong>AI-First</strong> approach to mixing.</p>
+    </div>
+  </div>
+
+  <div class="plugin-content">
+
+    
+    <div class="plugin-downloads">
+      <h2>Download</h2>
+      <div class="dl-row">
+        <a href="/assets/releases/equilibrium-win.clap" class="dl-btn large">Windows</a>
+        <a href="/assets/releases/equilibrium-linux.clap" class="dl-btn large">Linux</a>
+      </div>
+      <div class="howto-install">
+        <h3>How to install</h3>
+        <ol>
+          <li>Download the <code>.clap</code> file for your platform</li>
+          <li>Copy it into your CLAP folder:
+            <ul>
+              <li><strong>Windows:</strong> <code>C:\Program Files\Common Files\CLAP</code></li>
+              <li><strong>Linux:</strong> <code>~/.clap</code></li>
+              <li>Or create your own folder and add it in your DAW's plugin settings</li>
+            </ul>
+          </li>
+          <li>Restart your DAW — or use its plugin reload/scan function</li>
+        </ol>
+        <p class="howto-update"><strong>Update:</strong> Just replace the old <code>.clap</code> file with the new one and reload your DAW.</p>
+      </div>
+    </div>
+    
+<br>
+    <div class="plugin-features">
+      <h2>Features</h2>
+      <ul>
+        
+        <li>5-band spectral equalizer with real-time FFT overlay and tolerance visualization</li>
+        
+        <li>Independent stereo width control per band (mono to 150% width)</li>
+        
+        <li>Internal Mid/Side processing mode with configurable mono floor</li>
+        
+        <li>Phase Correlation metering and L/R balance display</li>
+        
+        <li>Auto Gain Compensation to maintain consistent output level during EQ adjustments</li>
+        
+        <li>Pre-Master Gain Correction with configurable target peak (−6 to −3 dB)</li>
+        
+        <li>Goniometer scope visualization with auto-scaling envelope follower</li>
+        
+        <li>SNAP export — structured Markdown snapshot for AI-assisted analysis and feedback</li>
+        
+        <li>Zero-latency processing with optional pre-master limiting</li>
+        
+        <li>GPU-accelerated Iced/wgpu UI with responsive band visualization</li>
+        
+        <li>Mono and Delta monitoring modes for diagnostic analysis</li>
+        
+      </ul>
+    </div>
+<br>
+    <div class="plugin-tech">
+      <h2>Technical</h2>
+      <dl>
+        <dt>Format</dt><dd>CLAP</dd>
+        <dt>Platforms</dt><dd>Windows x64, Linux x64</dd>
+        <dt>Language</dt><dd>Rust (nice-plug, Iced, wgpu)</dd>
+      </dl>
+    </div>
+<br>
+    <div class="plugin-links">
+      <h2>Resources</h2>
+      <div class="resource-links">
+        
+        <span class="resource-btn disabled">📖 User Manual — coming soon</span>
+        
+        
+        <span class="resource-btn disabled">▶ Walkthrough Video — coming soon</span>
+        
+      </div>
+    </div>
+<br>
+    <div class="plugin-snap">
+      <h2>SNAP — AI Analysis</h2>
+      <p>
+        Equilibrium ships with <strong>SNAP</strong>: export your complete plugin state —
+        spectrum, band levels, parameters — as a structured markdown snapshot.
+        Feed that into ChatGPT, Claude, or any LLM for analysis, suggestions,
+        or a second opinion on your mix.
+      </p>
+      <p>
+        SNAP saves the snapshot as a <code>.md</code> (Markdown) file in your plugin's vault folder.
+        To read it, use any Markdown reader — we recommend
+        <a href="https://obsidian.md" target="_blank" rel="noopener">Obsidian</a>
+        for the best experience.
+      </p>
+    </div>
+  </div>
+<br>
+  <div class="back-link">
+    <a href="/plugins/">← All Plugins</a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://www.youtube.com/@lxndrbe" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.facebook.com/LXNDR.BE/" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.beatport.com/de/artist/lxndr-be/1150426" target="_blank" rel="noopener">Beatport</a>
+    <a href="https://ardvinnamoon.bandcamp.com/" target="_blank" rel="noopener">Ardvinnamoon Records</a>
+  </div>
+  <div class="footer-note">LX Audiolabs &mdash; LXNDR (BE) · ITEM8</div>
+</footer>
+
+
+</body>
+</html>

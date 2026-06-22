@@ -1,0 +1,891 @@
+/* ═══════════════ LX AUDIOLABS — Jekyll Theme ═══════════════ */
+/* Keep existing design, add Jekyll page types */
+
+:root {
+  --void: #0F0F0F;
+  --abyss: #121414;
+  --surface: #171A1A;
+  --elevated: #232626;
+  --border: #2E3838;
+  --amber: #FF7319;
+  --amber-light: #FFA64D;
+  --green: #00D959;
+  --text-primary: #FFFFFF;
+  --text-label: #A6A6A6;
+  --text-dim: #666666;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background: var(--void);
+  color: var(--text-primary);
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Header ────────────────────────────── */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.logo .lx { color: var(--amber); }
+.logo .audiolabs { color: var(--text-primary); font-weight: 400; }
+
+nav { display: flex; align-items: center; gap: 4px; }
+
+nav a {
+  color: var(--text-label);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-left: 24px;
+  transition: color 0.15s ease;
+}
+
+nav a:hover { color: var(--amber); }
+
+nav a.active {
+  color: var(--amber-light);
+}
+
+.sponsor-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 115, 25, 0.08);
+  border-radius: 4px;
+  color: var(--text-label);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  transition: all 0.15s ease;
+  margin-left: 24px;
+}
+
+.sponsor-btn:hover {
+  background: rgba(255, 115, 25, 0.15);
+  border-color: var(--amber);
+  color: var(--amber-light);
+}
+
+.sponsor-btn svg { width: 16px; height: 16px; }
+
+/* ── Hero ──────────────────────────────── */
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px 32px;
+}
+
+main .eyebrow {
+  color: var(--amber);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+main h1 {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+main h1 .accent { color: var(--amber); }
+
+main .lead {
+  max-width: 560px;
+  color: var(--text-label);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+main .lead strong,
+.lead strong {
+  color: var(--amber);
+}
+
+.badge-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.badge {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-label);
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 8px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.badge:hover {
+  border-color: var(--amber);
+  color: var(--amber-light);
+  background: rgba(255, 115, 25, 0.06);
+}
+
+.badge.highlight {
+  border-color: var(--amber);
+  color: var(--amber-light);
+}
+
+/* ── Update Banner ─────────────────────── */
+
+.update-banner {
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto 36px;
+  padding: 12px 18px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--amber-light);
+}
+
+.update-banner .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--amber);
+  flex-shrink: 0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+.update-banner .date {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+/* ── Plugin Cards ──────────────────────── */
+
+.plugin-grid {
+  max-width: 660px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plugin-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid var(--border);
+  background: var(--elevated);
+  border-radius: 6px;
+  padding: 16px 20px;
+  text-align: left;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.plugin-card:hover {
+  border-color: var(--amber);
+  background: rgba(255, 115, 25, 0.04);
+}
+
+.plugin-card img {
+  width: 120px;
+  height: auto;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.plugin-card .card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.plugin-card .name {
+  color: var(--amber);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.plugin-card .name .ver {
+  color: var(--text-dim);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin-left: 8px;
+}
+
+.plugin-card .tagline {
+  color: var(--text-label);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.plugin-card .status {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--amber-light);
+  border: 1px solid rgba(255, 115, 25, 0.3);
+  border-radius: 3px;
+  padding: 2px 8px;
+}
+
+/* ── Plugin Detail: Download Buttons ──── */
+
+.plugin-downloads .dl-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.dl-btn {
+  text-align: center;
+  padding: 8px 0;
+  border: 1px solid var(--amber);
+  border-radius: 4px;
+  color: var(--amber-light);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
+  background: rgba(255, 115, 25, 0.06);
+}
+
+.dl-btn:hover {
+  background: rgba(255, 115, 25, 0.18);
+  color: var(--text-primary);
+}
+
+.plugin-downloads .dl-btn.large {
+  padding: 12px 32px;
+  font-size: 14px;
+}
+
+.dl-note {
+  color: var(--text-dim);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* ── Plugin Detail: Resource Links ────── */
+
+.plugin-links .resource-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.resource-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-label);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: all 0.15s ease;
+}
+
+.resource-btn:hover {
+  border-color: var(--amber);
+  color: var(--amber-light);
+  background: rgba(255, 115, 25, 0.06);
+}
+
+/* ── Info Sections ─────────────────────── */
+
+.info-section {
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 40px 0 32px;
+  border-top: 1px solid var(--border);
+}
+
+.info-section:first-of-type {
+  border-top: none;
+  padding-top: 36px;
+}
+
+.info-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: var(--amber);
+}
+
+.info-section p {
+  color: var(--text-label);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+.info-section p + p {
+  margin-top: 12px;
+}
+
+.info-section strong {
+  color: var(--amber);
+}
+
+.info-section a {
+  color: var(--amber-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.info-section strong.amber {
+  color: var(--amber);
+}
+
+/* ── Page Layout (non-hero pages) ─────── */
+
+.page-content {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 48px 24px 32px;
+  text-align: left;
+}
+
+.page-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  color: var(--amber);
+  text-align: center;
+}
+
+.page-content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 36px 0 12px;
+  color: var(--amber);
+}
+
+.page-content p, .page-content li {
+  color: var(--text-label);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.page-content p + p { margin-top: 12px; }
+
+.page-content a {
+  color: var(--amber-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.page-content ul li::before {
+  content: "▸";
+  color: var(--amber);
+  margin-right: 10px;
+}
+
+.page-content ul li {
+  margin-bottom: 6px;
+}
+
+.page-content dl {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 4px 12px;
+}
+
+.page-content dt {
+  color: var(--text-dim);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.page-content dd {
+  color: var(--text-label);
+  font-size: 14px;
+}
+
+/* ── Plugin Detail Page ──────────────── */
+
+.plugin-hero {
+  display: flex;
+  gap: 32px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 36px 0 24px;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.plugin-hero-img {
+  width: 240px;
+  height: auto;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.plugin-hero-text {
+  flex: 1;
+}
+
+.plugin-hero-text .eyebrow {
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.plugin-hero-text h1 {
+  font-size: 36px;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.plugin-hero-text h1 .ver {
+  color: var(--text-dim);
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.plugin-hero-text .lead {
+  text-align: left;
+  max-width: 100%;
+}
+
+.plugin-hero-text .lead strong {
+  color: var(--amber);
+}
+
+.plugin-content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 0;
+  text-align: left;
+}
+
+.plugin-content h2 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 48px 0 12px;
+  color: var(--amber);
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+.plugin-content h2:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.plugin-content h3 {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 20px 0 8px;
+  color: var(--text-primary);
+}
+
+.plugin-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.plugin-content ul li::before {
+  content: "▸";
+  color: var(--amber);
+  margin-right: 10px;
+}
+
+.plugin-content ul li {
+  color: var(--text-label);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+.plugin-content dl {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 4px 12px;
+}
+
+.plugin-content dt {
+  color: var(--text-dim);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.plugin-content dd {
+  color: var(--text-label);
+  font-size: 14px;
+}
+
+.plugin-downloads {
+  margin-top: 0;
+}
+
+.plugin-downloads .dl-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.plugin-downloads .dl-btn.large {
+  padding: 12px 32px;
+  font-size: 14px;
+}
+
+.dl-note {
+  color: var(--text-dim);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* ── HOWTO Install ───────────────────── */
+
+.howto-install {
+  margin-top: 24px;
+  padding: 16px 20px 20px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+.howto-install h3 {
+  margin: 0 0 8px;
+}
+
+.howto-install ol {
+  padding-left: 20px;
+  color: var(--text-label);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.howto-install ol ul {
+  margin: 4px 0 4px 16px;
+  list-style: disc;
+}
+
+.howto-install ol ul li {
+  color: var(--text-label);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 2px;
+}
+
+.howto-install ol ul li::before {
+  content: none;
+}
+
+.howto-install code {
+  color: var(--amber-light);
+  font-size: 12px;
+  background: var(--elevated);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.howto-update {
+  margin-top: 14px;
+  color: var(--text-label);
+  font-size: 13px;
+}
+
+.howto-update code {
+  color: var(--amber-light);
+  font-size: 12px;
+  background: var(--elevated);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* ── Resources (disabled state) ──────── */
+
+.resource-btn.disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.resource-btn.disabled:hover {
+  border-color: var(--border);
+  color: var(--text-label);
+  background: transparent;
+}
+
+/* ── SNAP ────────────────────────────── */
+
+.plugin-snap {
+  margin-top: 0;
+}
+
+.plugin-snap p {
+  color: var(--text-label);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+.plugin-snap p + p {
+  margin-top: 12px;
+}
+
+.plugin-snap code {
+  color: var(--amber-light);
+  font-size: 13px;
+  background: var(--elevated);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.plugin-snap a {
+  color: var(--amber-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.plugin-snap a:hover {
+  color: var(--amber);
+}
+
+.back-link {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.back-link a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.15s ease;
+}
+
+.back-link a:hover { color: var(--amber); }
+
+/* ── Plugin Overview Page (Grid) ──────── */
+
+.plugin-overview {
+  max-width: 660px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.plugin-overview .plugin-card {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  gap: 0;
+}
+
+.plugin-overview .plugin-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px 6px 0 0;
+}
+
+.plugin-overview .plugin-card .card-info {
+  padding: 14px 16px 16px;
+}
+
+.plugin-overview .plugin-card .name {
+  font-size: 16px;
+}
+
+/* ── FAQ ───────────────────────────────── */
+
+.faq-section {
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 40px 0 32px;
+}
+
+.faq-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  color: var(--amber);
+}
+
+.faq-item {
+  margin-bottom: 22px;
+  border-top: 1px solid var(--border);
+  padding-top: 22px;
+}
+
+.faq-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.faq-item .q {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.faq-item .a {
+  color: var(--text-label);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+.faq-item .a a {
+  color: var(--amber-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.faq-item .a a:hover { color: var(--amber); }
+
+/* ── Footer ────────────────────────────── */
+
+footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  padding: 28px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: color 0.15s ease;
+}
+
+.footer-links a:hover { color: var(--amber); }
+
+.footer-note {
+  color: var(--text-dim);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* ── Responsive ───────────────────────── */
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  nav { flex-wrap: wrap; justify-content: center; gap: 8px; }
+  nav a { margin-left: 0; }
+  .sponsor-btn { margin-left: 0; }
+
+  main { padding: 32px 16px 24px; }
+  main h1 { font-size: 28px; }
+
+  .plugin-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 16px;
+  }
+
+  .plugin-hero-text { text-align: center; }
+  .plugin-hero-text .eyebrow { text-align: center; }
+  .plugin-hero-text h1 { text-align: center; }
+  .plugin-hero-text .lead { text-align: center; }
+
+  .plugin-hero-img { width: 180px; }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+  }
+}

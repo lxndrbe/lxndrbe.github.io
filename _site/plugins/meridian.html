@@ -1,0 +1,168 @@
+<!---
+  plugin.html — Volle Plugin-Detailseite
+  Frontmatter: layout: plugin, plugin: <slug>
+  Holt Daten aus _data/plugins.yml
+--->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian — LX Audiolabs</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <a href="/" style="text-decoration:none;display:flex;align-items:baseline;gap:0;">
+      <span class="lx">LX</span><span class="audiolabs">AUDIOLABS</span>
+    </a>
+  </div>
+  <nav>
+    <a href="/plugins/">Plugins</a>
+    <a href="/faq/">FAQ</a>
+    <a href="/about/">About</a>
+    <a href="https://www.youtube.com/@lxndrbe" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://github.com/sponsors/lxndrbe" target="_blank" rel="noopener" class="sponsor-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+      SPONSOR
+    </a>
+  </nav>
+</header>
+
+
+<main>
+  <div class="plugin-hero">
+    
+    <img src="/assets/img/Meridian-SC.png" alt="Meridian" class="plugin-hero-img">
+    
+    <div class="plugin-hero-text">
+      <div class="eyebrow">STABLE</div>
+      <h1>Meridian <span class="ver">v1.1.0</span></h1>
+      <p class="lead">Meridian is a channel shaper built for tracks and group channels that need both surgical EQ and character. It combines a 5-band parametric EQ with variable frequencies, a soft-knee compressor, and analog-style saturation in a purpose-built signal flow. <br><br> Unlike traditional mixing chains that separate tonal shaping from dynamic control, Meridian uses an <strong>intentional hybrid approach</strong>: exciter before compressor, saturation after. The compressor <em>reacts to</em> the harmonics you create with the exciter — resulting in denser, more organic glue. Saturation then adds warmth on top, subtly coloring the already-shaped dynamics. The result is neither overprocessed nor sterile — just focused shaping that <strong>stacks intelligently</strong>. <br><br> Every move is visualized in real-time: a 1/3-octave-smoothed FFT spectrum shows your mix after processing, with an <strong>amber EQ-curve overlay</strong> displaying the exact effect of each band. Phase correlation and goniometer monitoring ensure your stereo image stays tight and intentional. Solo bands to isolate problem frequencies, and export your settings as a structured Markdown snapshot for <strong>AI-assisted feedback</strong> and iteration — this is mixing that shows its work.</p>
+    </div>
+  </div>
+
+  <div class="plugin-content">
+
+    
+    <div class="plugin-downloads">
+      <h2>Download</h2>
+      <div class="dl-row">
+        <a href="/assets/releases/meridian-win.clap" class="dl-btn large">Windows</a>
+        <a href="/assets/releases/meridian-linux.clap" class="dl-btn large">Linux</a>
+      </div>
+      <div class="howto-install">
+        <h3>How to install</h3>
+        <ol>
+          <li>Download the <code>.clap</code> file for your platform</li>
+          <li>Copy it into your CLAP folder:
+            <ul>
+              <li><strong>Windows:</strong> <code>C:\Program Files\Common Files\CLAP</code></li>
+              <li><strong>Linux:</strong> <code>~/.clap</code></li>
+              <li>Or create your own folder and add it in your DAW's plugin settings</li>
+            </ul>
+          </li>
+          <li>Restart your DAW — or use its plugin reload/scan function</li>
+        </ol>
+        <p class="howto-update"><strong>Update:</strong> Just replace the old <code>.clap</code> file with the new one and reload your DAW.</p>
+      </div>
+    </div>
+    
+<br>
+    <div class="plugin-features">
+      <h2>Features</h2>
+      <ul>
+        
+        <li>5-band parametric EQ with variable frequencies (Bass, Lo-Mid, Mid, Hi-Mid, High)</li>
+        
+        <li>Per-band slope selection (A/B/C for Q control: 0.4 / 0.7 / 1.5)</li>
+        
+        <li>Tilt EQ for tone shaping (±1.5 dB around 1 kHz pivot; warm/bright toggle)</li>
+        
+        <li>High-frequency exciter with harmonics-only saturation (placed BEFORE compressor)</li>
+        
+        <li>Soft-knee compressor (1.5–4.0:1 ratio with automatic knee softness)</li>
+        
+        <li>Parallel compression for transparent tone shaping (0–100% mix)</li>
+        
+        <li>Analog-style saturation (tube-like warmth, placed AFTER compressor)</li>
+        
+        <li>Global stereo width control (0–200%)</li>
+        
+        <li>Real-time FFT spectrum with 1/3-octave smoothing</li>
+        
+        <li>Amber EQ curve overlay showing exact band response</li>
+        
+        <li>Stereo phase correlation meter and goniometer visualization</li>
+        
+        <li>SNAP export — structured Markdown snapshot for AI feedback</li>
+        
+        <li>Zero-latency processing with denormal protection</li>
+        
+      </ul>
+    </div>
+<br>
+    <div class="plugin-tech">
+      <h2>Technical</h2>
+      <dl>
+        <dt>Format</dt><dd>CLAP</dd>
+        <dt>Platforms</dt><dd>Windows x64, Linux x64</dd>
+        <dt>Language</dt><dd>Rust (nice-plug, Iced, wgpu)</dd>
+      </dl>
+    </div>
+<br>
+    <div class="plugin-links">
+      <h2>Resources</h2>
+      <div class="resource-links">
+        
+        <span class="resource-btn disabled">📖 User Manual — coming soon</span>
+        
+        
+        <span class="resource-btn disabled">▶ Walkthrough Video — coming soon</span>
+        
+      </div>
+    </div>
+<br>
+    <div class="plugin-snap">
+      <h2>SNAP — AI Analysis</h2>
+      <p>
+        Meridian ships with <strong>SNAP</strong>: export your complete plugin state —
+        spectrum, band levels, parameters — as a structured markdown snapshot.
+        Feed that into ChatGPT, Claude, or any LLM for analysis, suggestions,
+        or a second opinion on your mix.
+      </p>
+      <p>
+        SNAP saves the snapshot as a <code>.md</code> (Markdown) file in your plugin's vault folder.
+        To read it, use any Markdown reader — we recommend
+        <a href="https://obsidian.md" target="_blank" rel="noopener">Obsidian</a>
+        for the best experience.
+      </p>
+    </div>
+  </div>
+<br>
+  <div class="back-link">
+    <a href="/plugins/">← All Plugins</a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-links">
+    <a href="https://www.youtube.com/@lxndrbe" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.facebook.com/LXNDR.BE/" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.beatport.com/de/artist/lxndr-be/1150426" target="_blank" rel="noopener">Beatport</a>
+    <a href="https://ardvinnamoon.bandcamp.com/" target="_blank" rel="noopener">Ardvinnamoon Records</a>
+  </div>
+  <div class="footer-note">LX Audiolabs &mdash; LXNDR (BE) · ITEM8</div>
+</footer>
+
+
+</body>
+</html>
