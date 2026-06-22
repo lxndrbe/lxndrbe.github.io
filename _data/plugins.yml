@@ -43,7 +43,7 @@
     mac: assets/releases/equilibrium-mac.clap
     linux: assets/releases/equilibrium-linux.clap
   manual_url: ""
-  youtube_url: ""
+  youtube_url: "https://www.youtube.com/watch?v=Ei8rYbZjjYI"
   image: assets/img/Equilibrum-SC.png
   status: stable
 
