@@ -33,8 +33,10 @@
       <h2>Download</h2>
       <div class="dl-row">
         <a href="{{ plugin.downloads.win | relative_url }}" class="dl-btn large">Windows</a>
+        <a href="{{ plugin.downloads.mac | relative_url }}" class="dl-btn large">Mac</a>
         <a href="{{ plugin.downloads.linux | relative_url }}" class="dl-btn large">Linux</a>
       </div>
+      <p class="dl-note">Mac builds are for <strong>Apple Silicon</strong> (M1–M4). Intel Macs not supported.</p>
       <div class="howto-install">
         <h3>How to install</h3>
         <ol>
@@ -42,6 +44,7 @@
           <li>Copy it into your CLAP folder:
             <ul>
               <li><strong>Windows:</strong> <code>C:\Program Files\Common Files\CLAP</code></li>
+              <li><strong>Mac:</strong> <code>/Library/Audio/Plug-Ins/CLAP</code> or <code>~/Library/Audio/Plug-Ins/CLAP</code></li>
               <li><strong>Linux:</strong> <code>~/.clap</code></li>
               <li>Or create your own folder and add it in your DAW's plugin settings</li>
             </ul>

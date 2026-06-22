@@ -6,9 +6,14 @@ description: >-
 baseurl: ""
 url: "https://lxndrbe.github.io"
 
-# Update Banner — ändere hier Datum + Text
-update_date: "2026-06-21"
-update_text: "Equilibrium v1.1.0 &amp; Meridian v1.1.0 — Available now"
+# Update Banner — newest first
+updates:
+  - date: "2026-06-22"
+    text: "Meridian v1.1.1 — Minor bugfixes"
+  - date: "2026-06-22"
+    text: "Now also CLAP for Mac — All plugins available for Apple Silicon"
+  - date: "2026-06-21"
+    text: "Equilibrium v1.1.0 &amp; Meridian v1.1.0 — Available now"
 
 # Social
 youtube: https://www.youtube.com/@lxndrbe

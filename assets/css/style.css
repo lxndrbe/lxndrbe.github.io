@@ -172,11 +172,15 @@ main .lead strong,
 
 /* ── Update Banner ─────────────────────── */
 
+.update-banner-list {
+  margin-bottom: 48px;
+}
+
 .update-banner {
   width: 100%;
   max-width: 660px;
-  margin: 0 auto 36px;
-  padding: 12px 18px;
+  margin: 0 auto 6px;
+  padding: 10px 18px;
   border: 1px solid var(--border);
   background: var(--surface);
   border-radius: 6px;
