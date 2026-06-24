@@ -1,3 +1,43 @@
+- slug: aether
+  name: Aether
+  version: v1.0.0
+  tagline: >-
+    Headphone mixing correction. Harman EQ + spatial crossfeed for accurate, translatable mixes.
+  description: >-
+    Aether transforms headphones into precise mixing monitors. It applies a frequency-corrected Harman curve
+    matched to typical headphone response, letting you hear your mix translate accurately to speakers. Its spatial
+    crossfeed engine simulates stereo imaging and room acoustics on headphones — three realism modes
+    (Standard / Lifelike / Hyperrealistic) let you dial in the right amount of "room feel" for your workflow.
+    <br><br>
+    A 5-band Harman EQ with independent band types gives you surgical control over the correction curve. The crossfeed
+    angle (30°–75° virtual speaker width) and amount controls let you match your headphone acoustics precisely.
+    Real-time EQ graph, preset persistence, and direct value entry round out the toolset — no hunting for parameters.
+    <br><br>
+    Designed for use as a monitoring-chain plugin (not for mastering print), Aether sits post-master where its spatial
+    simulation and headphone correction enhance your mixing decisions without coloring the mix you render.
+  features:
+    - "5-band Harman EQ matched to typical headphone response (20 Hz–20 kHz)"
+    - "Spatial crossfeed simulation with 3 realism modes (Standard/Lifelike/Hyperrealistic)"
+    - "Adjustable virtual speaker angle (30°–75°) with degree display"
+    - "Mid/Side independent gain control for stereo balance"
+    - "Real-time EQ curve visualization with direct value entry"
+    - "AutoEQ.app format support for headphone profiles"
+    - "Preset persistence with automatic load-on-launch"
+    - "Input peak metering with peak hold"
+    - "Zero-latency monitoring DSP"
+  tech:
+    format: CLAP
+    platforms: "Windows x64, Linux x64, macOS (Apple Silicon)"
+    language: Rust (nih-plug, Iced, wgpu)
+  downloads:
+    win: assets/releases/aether-win.clap
+    linux: assets/releases/aether-linux.clap
+    mac: assets/releases/aether-mac.clap
+  manual_url: ""
+  youtube_url: ""
+  image: assets/img/Aether-SC.png
+  status: stable
+
 - slug: equilibrium
   name: Equilibrium
   version: v1.1.2
