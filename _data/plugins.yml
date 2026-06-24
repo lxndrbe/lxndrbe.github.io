@@ -27,7 +27,7 @@
   tech:
     format: CLAP
     platforms: "Windows x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (nih-plug, Iced, wgpu)
+    language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: assets/releases/aether-win.clap
     linux: assets/releases/aether-linux.clap
@@ -150,7 +150,7 @@
   tech:
     format: CLAP
     platforms: "Windows x64, Linux x64, macOS (Apple Silicon)"
-    language: Rust (nih-plug, Iced, wgpu)
+    language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: "#"
     mac: "#"
