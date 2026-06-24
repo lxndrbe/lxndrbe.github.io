@@ -19,7 +19,6 @@
     - "5-band Harman EQ matched to typical headphone response (20 Hz–20 kHz)"
     - "Spatial crossfeed simulation with 3 realism modes (Standard/Lifelike/Hyperrealistic)"
     - "Adjustable virtual speaker angle (30°–75°) with degree display"
-    - "Mid/Side independent gain control for stereo balance"
     - "Real-time EQ curve visualization with direct value entry"
     - "AutoEQ.app format support for headphone profiles"
     - "Preset persistence with automatic load-on-launch"
