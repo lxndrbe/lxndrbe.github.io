@@ -4,16 +4,16 @@
   tagline: >-
     Headphone mixing correction. Harman EQ + spatial crossfeed for accurate, translatable mixes.
   description: >-
-    Aether transforms headphones into precise mixing monitors. It applies a frequency-corrected Harman curve
+    Aether transforms headphones into precise mixing monitors. It applies a <strong>frequency-corrected Harman curve</strong>
     matched to typical headphone response, letting you hear your mix translate accurately to speakers. Its spatial
-    crossfeed engine simulates stereo imaging and room acoustics on headphones — three realism modes
+    <strong>crossfeed engine</strong> simulates stereo imaging and room acoustics on headphones — three realism modes
     (Standard / Lifelike / Hyperrealistic) let you dial in the right amount of "room feel" for your workflow.
     <br><br>
-    A 5-band Harman EQ with independent band types gives you surgical control over the correction curve. The crossfeed
+    A <strong>5-band Harman EQ</strong> with independent band types gives you surgical control over the correction curve. The crossfeed
     angle (30°–75° virtual speaker width) and amount controls let you match your headphone acoustics precisely.
-    Real-time EQ graph, preset persistence, and direct value entry round out the toolset — no hunting for parameters.
+    <strong>Real-time EQ graph</strong>, preset persistence, and direct value entry round out the toolset — no hunting for parameters.
     <br><br>
-    Designed for use as a monitoring-chain plugin (not for mastering print), Aether sits post-master where its spatial
+    Designed for use as a <strong>monitoring-chain plugin</strong> (not for mastering print), Aether sits post-master where its spatial
     simulation and headphone correction enhance your mixing decisions without coloring the mix you render.
   features:
     - "5-band Harman EQ with type-flexible bands (Off/LowShelf/Peak/HighShelf)"
