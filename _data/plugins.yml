@@ -47,8 +47,8 @@
   description: >-
     Equilibrium is your spectral balancer for the master bus.
     It splits the frequency spectrum into five independent bands — Sub, Bass, Mid, Hi-Mid,
-    Presence — each with its own EQ, stereo width, and pan control. A real-time FFT overlay
-    shows you exactly what's happening across your mix in zero-latency processing, eliminating
+    Presence — each with its own EQ, stereo width, and pan control. Band-Indikator-Bars
+    show you exactly what's happening across your mix in zero-latency processing, eliminating
     guesswork and delivering surgical precision.
     <br><br>
     Unlike traditional parametric EQs that require you to hunt for the right frequency,
@@ -62,7 +62,7 @@
     Export your plugin state via SNAP and feed it into any AI for feedback —
     this is the <strong>AI-First</strong> approach to mixing.
   features:
-    - "5-band spectral equalizer with real-time FFT overlay and tolerance visualization"
+    - "5-band spectral equalizer with Band-Indikator-Bars"
     - "Independent stereo width control per band (mono to 150% width)"
     - "Internal Mid/Side processing mode with configurable mono floor"
     - "Phase Correlation metering and L/R balance display"
