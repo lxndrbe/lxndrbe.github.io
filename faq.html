@@ -60,6 +60,23 @@ permalink: /faq/
       </div>
     </div>
 
+    <div class="faq-item" id="win10">
+      <div class="q">Q: Do the plugins work on Windows 10?</div>
+      <div class="a">
+        <strong>Audio processing works.</strong> Static controls — knobs, sliders, buttons —
+        all work normally on Windows 10. However, the <strong>animated displays</strong>
+        (spectrum analyzer, goniometer, peak meters) will appear blank. These real-time
+        visualizations rely on a GPU-accelerated rendering pipeline (Iced + wgpu) that
+        uses Windows 11's modern window-manager integration. On Windows 10, the graphics
+        framework cannot reliably detect when the plugin window is ready to receive animated
+        frames, so it never starts drawing them.<br><br>
+        This is not a GPU hardware issue — any DirectX 12 capable GPU works fine. It's a
+        window-lifecycle mismatch between the Iced GUI toolkit and Windows 10's compositor.
+        Since Windows 10 is end-of-life, we target <strong>Windows 11</strong> as the
+        minimum supported platform for the full experience.
+      </div>
+    </div>
+
     <div class="faq-item">
       <div class="q">Q: What is SNAP and how do I use it?</div>
       <div class="a">

@@ -26,7 +26,7 @@
     - "Zero-latency monitoring DSP"
   tech:
     format: CLAP
-    platforms: "Windows x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: assets/releases/aether-win.clap
@@ -75,7 +75,7 @@
     - "Mono and Delta monitoring modes for diagnostic analysis"
   tech:
     format: CLAP
-    platforms: "Windows x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: assets/releases/equilibrium-win.clap
@@ -127,7 +127,7 @@
     - "Zero-latency processing with denormal protection"
   tech:
     format: CLAP
-    platforms: "Windows x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: assets/releases/meridian-win.clap
@@ -152,7 +152,7 @@
     - "Auto-release based on material analysis"
   tech:
     format: CLAP
-    platforms: "Windows x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: "#"
