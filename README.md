@@ -3,7 +3,7 @@
 This is the public issue tracker for **LX Audiolabs CLAP plugins**.  
 The actual website lives at **[lxndrbe.github.io](https://lxndrbe.github.io)**.
 
-<img src="assets/img/built-with-truce-vertical.png" alt="Built with truce" width="120" align="right">
+<img src="assets/img/built-with-truce-horizontal.png" alt="Built with truce" width="180" align="right">
 
 ## 🐛 Report a Bug
 
