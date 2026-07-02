@@ -1,0 +1,102 @@
+name: Beta Bug Report
+description: Report a bug found in an LX Audiolabs beta plugin
+title: "[BUG] "
+labels: ["bug", "beta"]
+body:
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Which Plugin?
+      description: Select the plugin where you found the bug.
+      options:
+        - Equilibrium
+        - Meridian
+        - Aether
+        - Aurum
+        - Lucent
+        - Lucent Relay
+        - All / Multiple
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Plugin Version
+      description: The version number shown in the plugin UI (e.g. v1.4.0-beta1).
+      placeholder: "v1.4.0-beta1"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: os
+    attributes:
+      label: Operating System
+      description: Which OS did you test on? (select all that apply)
+      options:
+        - label: Windows 11
+        - label: Windows 10
+        - label: Linux
+        - label: macOS (Apple Silicon)
+        - label: macOS (Intel)
+    validations:
+      required: true
+
+  - type: input
+    id: daw
+    attributes:
+      label: DAW
+      description: Which DAW and version were you using? (e.g. Bitwig 5.2, Reaper 7)
+      placeholder: "Bitwig Studio 5.2"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-did-you-do
+    attributes:
+      label: What did you do?
+      description: Describe the steps you took before the bug occurred.
+      placeholder: "1. Loaded plugin on master bus\n2. Adjusted EQ band 3\n3. …"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: A clear description of what you expected.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened?
+      description: Describe what went wrong — crashes, visual glitches, wrong audio, etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: reproducible
+    attributes:
+      label: Is it reproducible?
+      options:
+        - Always
+        - Sometimes
+        - Only happened once
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: If reproducible, list the exact steps to trigger the bug.
+      placeholder: "1. Open plugin in Bitwig\n2. Click SNAP button\n3. …"
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Info
+      description: Screenshots, SNAP output, crash logs, or anything else that might help.
