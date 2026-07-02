@@ -8,14 +8,11 @@ url: "https://lxndrbe.github.io"
 
 # Update Banner — newest first
 updates:
-  - date: "2026-06-25"
-    text: "Meridian v1.4.2 Update: Many Bugfixes and new Tilt Slop Ranges"
-  - date: "2026-06-25"
-    text: "Equilibrium v1.2.4 Update: Minor Bugfixes and Goniometer Improvements"
-  - date: "2026-06-25"
-    text: "Aether v1.0.5 OUT NOW: Harman meets Crossfeed - Low CPU & GPU Version"  
-  - date: "2026-06-22"
-    text: "Now also CLAP for Mac — All plugins available for Apple Silicon"
+  - date: "2026-06-29"
+    text: >-
+      Meridian v1.5.2, Equilibrium v1.3.1, Aether v1.0.7: Minor Bugfixes in Auto Loud and
+      DELTA monitoring.
+  
  
 
 # Social

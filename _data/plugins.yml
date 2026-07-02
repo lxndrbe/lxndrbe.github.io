@@ -1,32 +1,32 @@
 - slug: aether
   name: Aether
-  version: v1.0.5
+  version: v1.0.7
   tagline: >-
     Headphone mixing correction. Harman EQ + spatial crossfeed for accurate, translatable mixes.
   description: >-
-    Aether transforms headphones into precise mixing monitors. It applies a frequency-corrected Harman curve
+    Aether transforms headphones into precise mixing monitors. It applies a <strong>frequency-corrected Harman curve</strong>
     matched to typical headphone response, letting you hear your mix translate accurately to speakers. Its spatial
-    crossfeed engine simulates stereo imaging and room acoustics on headphones — three realism modes
+    <strong>crossfeed engine</strong> simulates stereo imaging and room acoustics on headphones — three realism modes
     (Standard / Lifelike / Hyperrealistic) let you dial in the right amount of "room feel" for your workflow.
     <br><br>
-    A 5-band Harman EQ with independent band types gives you surgical control over the correction curve. The crossfeed
+    A <strong>5-band Harman EQ</strong> with independent band types gives you surgical control over the correction curve. The crossfeed
     angle (30°–75° virtual speaker width) and amount controls let you match your headphone acoustics precisely.
-    Real-time EQ graph, preset persistence, and direct value entry round out the toolset — no hunting for parameters.
+    <strong>Real-time EQ graph</strong>, preset persistence, and direct value entry round out the toolset — no hunting for parameters.
     <br><br>
-    Designed for use as a monitoring-chain plugin (not for mastering print), Aether sits post-master where its spatial
+    Designed for use as a <strong>monitoring-chain plugin</strong> (not for mastering print), Aether sits post-master where its spatial
     simulation and headphone correction enhance your mixing decisions without coloring the mix you render.
   features:
-    - "5-band Harman EQ matched to typical headphone response (20 Hz–20 kHz)"
+    - "5-band Harman EQ with type-flexible bands (Off/LowShelf/Peak/HighShelf)"
     - "Spatial crossfeed simulation with 3 realism modes (Standard/Lifelike/Hyperrealistic)"
-    - "Adjustable virtual speaker angle (30°–75°) with degree display"
-    - "Real-time EQ curve visualization with direct value entry"
-    - "AutoEQ.app format support for headphone profiles"
+    - "Adjustable virtual speaker angle (30°–75°) with dynamic head-shadow LPF"
+    - "Read-only EQ curve visualization (Amber transfer-function overlay)"
+    - "Manual AutoEQ.app value entry — copy FREQ/GAIN/Q from AutoEQ"
     - "Preset persistence with automatic load-on-launch"
     - "Input peak metering with peak hold"
     - "Zero-latency monitoring DSP"
   tech:
     format: CLAP
-    platforms: "Windows x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: assets/releases/aether-win.clap
@@ -40,15 +40,15 @@
 
 - slug: equilibrium
   name: Equilibrium
-  version: v1.2.4
+  version: v1.3.1
   tagline: >-
-    Balance your master bus by frequency. Real-time spectral analysis meets surgical
-    band-by-band EQ and stereo control — no mastering-grade compression, just precision correction.
+    Balance your master bus by frequency. Five fixed crossover bands with per-band Gain,
+    Stereo Width, and Pan — Band-Indikator-Bars show real-time energy, no mastering-grade compression.
   description: >-
     Equilibrium is your spectral balancer for the master bus.
     It splits the frequency spectrum into five independent bands — Sub, Bass, Mid, Hi-Mid,
-    Presence — each with its own EQ, stereo width, and pan control. A real-time FFT overlay
-    shows you exactly what's happening across your mix in zero-latency processing, eliminating
+    Presence — each with its own EQ, stereo width, and pan control. Band-Indikator-Bars
+    show you exactly what's happening across your mix in zero-latency processing, eliminating
     guesswork and delivering surgical precision.
     <br><br>
     Unlike traditional parametric EQs that require you to hunt for the right frequency,
@@ -62,20 +62,20 @@
     Export your plugin state via SNAP and feed it into any AI for feedback —
     this is the <strong>AI-First</strong> approach to mixing.
   features:
-    - "5-band spectral equalizer with real-time FFT overlay and tolerance visualization"
+    - "5-band crossover equalizer with Band-Indikator-Bars (energy columns, not FFT spectrum)"
     - "Independent stereo width control per band (mono to 150% width)"
-    - "Internal Mid/Side processing mode with configurable mono floor"
+    - "Configurable Mono Floor (side high-pass filter, 0–300 Hz)"
     - "Phase Correlation metering and L/R balance display"
     - "Auto Gain Compensation to maintain consistent output level during EQ adjustments"
-    - "Pre-Master Gain Correction with configurable target peak (−6 to −3 dB)"
+    - "Pre-Master Static Gain Correction with configurable target peak (−6 to −3 dB)"
     - "Goniometer scope visualization with auto-scaling envelope follower"
     - "SNAP export — structured Markdown snapshot for AI-assisted analysis and feedback"
-    - "Zero-latency processing with optional pre-master limiting"
+    - "Zero-latency processing with static pre-master gain correction"
     - "GPU-accelerated Iced/wgpu UI with responsive band visualization"
     - "Mono and Delta monitoring modes for diagnostic analysis"
   tech:
     format: CLAP
-    platforms: "Windows x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: assets/releases/equilibrium-win.clap
@@ -89,7 +89,7 @@
 
 - slug: meridian
   name: Meridian
-  version: v1.4.2
+  version: v1.5.2
   tagline: >-
     Sculpt and shape any track or group channel. Variable-band EQ + soft-knee compressor +
     analog saturation in one focused workflow. With spectral visualization to guide every move.
@@ -113,21 +113,21 @@
     iteration — this is mixing that shows its work.
   features:
     - "5-band parametric EQ with variable frequencies (Bass, Lo-Mid, Mid, Hi-Mid, High)"
-    - "Per-band slope selection (A/B/C for Q control: 0.4 / 0.7 / 1.5)"
+    - "Per-band slope selection (A/B/C: gentle / medium / steep)"
     - "Tilt EQ for tone shaping (±1.5 dB around 1 kHz pivot; warm/bright toggle)"
     - "High-frequency exciter with harmonics-only saturation (placed BEFORE compressor)"
-    - "Soft-knee compressor (1.5–4.0:1 ratio with automatic knee softness)"
+    - "Soft-knee compressor (1.5–4.0:1 ratio, automatic knee, with GR envelope visualization)"
     - "Parallel compression for transparent tone shaping (0–100% mix)"
-    - "Analog-style saturation (tube-like warmth, placed AFTER compressor)"
-    - "Global stereo width control (0–200%)"
-    - "Real-time FFT spectrum with 1/3-octave smoothing"
+    - "Tube-style warmth saturation (DC-biased tanh, even harmonics — placed AFTER compressor)"
+    - "Global stereo width control (0–200%, L/R matrix)"
+    - "Real-time FFT spectrum (Blackman-Harris 4-term window, 1/3-octave smoothing)"
     - "Amber EQ curve overlay showing exact band response"
     - "Stereo phase correlation meter and goniometer visualization"
     - "SNAP export — structured Markdown snapshot for AI feedback"
     - "Zero-latency processing with denormal protection"
   tech:
     format: CLAP
-    platforms: "Windows x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: assets/releases/meridian-win.clap
@@ -152,7 +152,7 @@
     - "Auto-release based on material analysis"
   tech:
     format: CLAP
-    platforms: "Windows x64, Linux x64, macOS (Apple Silicon)"
+    platforms: "Windows 11 x64, Linux x64, macOS (Apple Silicon)"
     language: Rust (nice-plug, Iced, wgpu)
   downloads:
     win: "#"

@@ -64,6 +64,17 @@
         </ol>
         <p class="howto-update"><strong>Update:</strong> Just replace the old <code>.clap</code> file with the new one and reload your DAW.</p>
       </div>
+
+      <div class="system-reqs">
+        <h3>System Requirements</h3>
+        <table>
+          <tr><td><strong>Windows</strong></td><td>Windows 11 64-bit</td></tr>
+          <tr><td><strong>GPU</strong></td><td>DirectX 12 capable (any GPU from ~2012+)</td></tr>
+          <tr><td><strong>CPU</strong></td><td>x86-64, any modern CPU</td></tr>
+          <tr><td><strong>DAW</strong></td><td>CLAP-compatible (Reaper, Bitwig, Studio One, FL Studio)</td></tr>
+        </table>
+        <p class="sysreq-note">LX plugins use GPU-accelerated rendering (Iced + wgpu) for real-time spectrum and meter displays. These rely on Windows 11's window-manager integration — on Windows 10 the animated displays (spectrum, goniometer, meters) remain blank. Audio processing and static controls still work. <a href="/faq/#win10">Learn more in the FAQ</a>.</p>
+      </div>
     </div>
     {% endif %}
 <br>
